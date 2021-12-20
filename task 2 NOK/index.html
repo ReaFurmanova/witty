@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Witty</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+<!-- <body onload="onLoaderFunc()"> -->
+
+<!-- The parent component -->
+<div class="curtain">
+	
+  <!-- The component wrapper -->
+  <div class="curtain__wrapper">
+     
+    <!-- The checkbox hack! -->
+    <input type="checkbox" checked class="hidden-checkbox" id="moveCurtains">
+    
+    <!-- The left curtain panel -->
+    <div class="curtain__panel curtain__panel--left">
+      <p class="curtain-text"><span>Koukni,</span><br><span>dnes</span><br><br>CLI</p>
+    </div> <!-- curtain__panel -->
+    
+    <!-- The prize behind the curtain panels -->
+    <div class="curtain__prize">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/c1P44Qr6gyI?autoplay=1&mute=1&controls=0&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div> <!-- curtain__prize -->
+    
+    <!-- The right curtain panel -->
+    <div class="curtain__panel curtain__panel--right">
+      <p class="curtain-text">co se <br>hraje<br><br>CK</p>
+    </div> <!-- curtain__panel -->
+    
+  </div> <!-- curtain__wrapper -->
+  
+</div> <!-- curtain -->
+
+
+<section>
+  
+  <h1>Lassi se vrací</h1>
+
+  <h2>Vyberte datum</h2>
+  <input type="date" id="date" required>
+  
+  <h2>Vyberte cas</h2>
+<div class="d-flex">
+  <button type="button" value="10:00" class="time">10:00</button>
+  <button type="button" value="12:00" class="time">12:00</button>
+  <button type="button" value="14:00" class="time">14:00</button>
+  <button type="button" value="16:00" class="time">16:00</button>
+  <button type="button" value="18:00" class="time">18:00</button>
+  <button type="button" value="20:00" class="time">20:00</button>
+</div>
+
+  <h2>Vyberte sedadlo</h2>
+  <table id="seatsBlock" class="seatsBlock">
+    
+    <tr>
+      <td></td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    
+    <tr>
+      <td>A</td>
+      <td><input type="checkbox" class="seats" value="A1"></td>
+      <td><input type="checkbox" class="seats" value="A2"></td>
+      <td><input type="checkbox" class="seats" value="A3"></td>
+      <td><input type="checkbox" class="seats" value="A4"></td>
+      <td><input type="checkbox" class="seats" value="A5"></td>
+      
+     <tr>
+       <td>B</td>
+       <td><input type="checkbox" class="seats" value="B1"></td>
+       <td><input type="checkbox" class="seats" value="B2"></td>
+       <td><input type="checkbox" class="seats" value="B3"></td>
+       <td><input type="checkbox" class="seats" value="B4"></td>
+       <td><input type="checkbox" class="seats" value="B5"></td>
+      </tr>
+      
+      <tr>
+        <td>C</td>
+        <td><input type="checkbox" class="seats" value="C1"></td>
+        <td><input type="checkbox" class="seats" value="C2"></td>
+        <td><input type="checkbox" class="seats" value="C3"></td>
+        <td><input type="checkbox" class="seats" value="C4"></td>
+        <td><input type="checkbox" class="seats" value="C5"></td>
+      </tr>
+      
+      <tr>
+       <td>F</td>
+       <td><input type="checkbox" class="seats" value="F1"></td>
+       <td><input type="checkbox" class="seats" value="F2"></td>
+       <td><input type="checkbox" class="seats" value="F3"></td>
+       <td><input type="checkbox" class="seats" value="F4"></td>
+       <td><input type="checkbox" class="seats" value="F5"></td>
+   </tr>
+   
+   <tr>
+     <td>G</td>
+       <td><input type="checkbox" class="seats" value="G1"></td>
+       <td><input type="checkbox" class="seats" value="G2"></td>
+       <td><input type="checkbox" class="seats" value="G3"></td>
+       <td><input type="checkbox" class="seats" value="G4"></td>
+       <td><input type="checkbox" class="seats" value="G5"></td>
+   </tr>
+     
+   <tr>
+       <td>H</td>
+       <td><input type="checkbox" class="seats" value="H1"></td>
+       <td><input type="checkbox" class="seats" value="H2"></td>
+       <td><input type="checkbox" class="seats" value="H3"></td>
+       <td><input type="checkbox" class="seats" value="H4"></td>
+       <td><input type="checkbox" class="seats" value="H5"></td>
+      </tr>      
+      
+    </table>
+    <div class="d-flex">
+      <div class="smallBox greenBox">Selected Seat</div> <br/>
+      <div class="smallBox redBox">Reserved Seat</div><br/>
+      <div class="smallBox emptyBox">Empty Seat</div><br/>
+    </div>
+    
+
+  
+  <button id="send" class="send">Pokracovat</button>
+  <p>Dvanáctiletý chlapec Flo a jeho dlouhosrstá kolie Lassie jsou známá dvojka po celém okolí. Nerozluční a neoddělitelní kamarádi se nebojí žádné společné lumpárny a užívají si idylického života na venkově. Pak ale Floriánův táta přijde o práci a rodina se musí přestěhovat do malého bytu, kam mají psi přísný zákaz. Všichni jsou zdrcení, ale život umí být i takový. Verdikt je neúprosný, Lassie musí z domu pryč. Ujme se jí sympatický hrabě a vezme ji na své panství k severnímu moři na druhém konci země jako dárek pro svou vnučku. Na první pohled by Lassie nemělo nic chybět. Její věrnost ale nemá hranic, a jakmile se naskytne příležitost, uteče. Rozběhne se zpátky domů, tam, kde je Florián a jeho rodina. Vyráží na neuvěřitelné psí dobrodružství, na ohromnou cestu přes celou zemi, na cestu plnou překážek, hodných lidí, i lidí se zlými úmysly. Přestože je stovky kilometrů daleko, Lassie žene touha a nic ji nemůže zastavit. Pro všechny má jasný vzkaz: Vracím se domů. </p>
+</section>
+
+
+<script src="./main.js"></script>
+
+</body>
+
+</html>
