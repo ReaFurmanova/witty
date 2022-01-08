@@ -1,0 +1,292 @@
+:root {
+  --bg: rgba(255,196,0, 0.1);
+  --curtain: #c90000;
+}
+h1 {
+    text-align: center;
+    color: var(--curtain);
+    transition: opacity 1s;
+    animation: example 5s linear;
+    font-size: 30px;
+}
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+h2{
+  font-size: 20px;
+  font-weight: 300;
+}
+.trailer {
+    width: 100vw;
+    height: 50vh;
+}
+
+.inputForm {
+  text-align: center;
+}
+
+body
+{
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  accent-color: var(--curtain);
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.screen
+{
+  width:100%;
+  height:20px;
+  background:#4388cc;
+  color:#fff;
+  line-height:20px;
+  font-size:15px;
+}
+.smallBox {
+  flex-grow: 1;
+  margin: 40px auto;
+}
+.smallBox::before
+{
+  content:"";
+  width:15px;
+  height:15px;
+  float:left;
+  margin-right:10px;
+}
+.greenBox::before
+{
+  content:"";
+  background:Green;
+}
+.redBox::before
+{
+  content:"";
+  background:Red;
+}
+.emptyBox::before
+{
+  content="";
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    background-color:#ccc;
+}
+
+.seats
+{
+  border:1px solid red;background:yellow;
+
+} 
+
+
+
+
+.seatGap
+{
+  width:40px;
+}
+
+.seatVGap
+{
+  height:40px;
+}
+
+table
+{
+  text-align:center;
+}
+
+
+.Displaytable
+{
+  text-align:center;
+}
+.Displaytable td, .Displaytable th {
+    border: 1px solid;
+    text-align: left;
+}
+
+textarea
+{
+  border:none;
+  background:transparent;
+}
+
+
+
+.seatsBlock input[type=checkbox] {
+    width:0px;
+    margin-right:18px;
+}
+
+.seatsBlock input[type=checkbox]:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align:middle;
+    text-align: center;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    background-color:#ccc;
+}
+
+.seatsBlock input[type=checkbox]:checked:before {
+    background-color:Red;
+    font-size: 15px;
+}
+
+
+
+
+.curtain {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+  
+.curtain__wrapper {
+  width: 100%;
+  height: 100%;
+}
+      
+.curtain__panel {
+  background: var(--curtain);
+  /* background: transparent; */
+  width: 50%;
+  height: 100vh;
+  float: left;
+  position: relative;
+  z-index: 2;
+  transition: all 2s linear;
+}
+  
+.curtain__prize {
+  background: var(--bg);
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+input[type=checkbox].hidden-checkbox {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+  margin: 0;
+}
+input[type=checkbox].hidden-checkbox:checked ~ div.curtain__panel--left {
+  transform: translateX(0);
+  background: var(--curtain);
+  background-image: url('./favpng_theater-drapes-and-stage-curtains.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 0 0 200px 0;
+}
+
+input[type=checkbox].hidden-checkbox:checked ~ div.curtain__panel--right {
+  transform: translateX(0);
+  background: var(--curtain);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('./favpng_theater-drapes-and-stage-curtainsRigth.png');
+  border-radius: 0 0 0 200px;
+}
+.curtain__panel--left {
+  transform: translateX(-95%);
+}
+
+.curtain__panel--right {
+  transform: translateX(95%);
+}
+.curtain__panel--left .curtain-text, .curtain__panel--right .curtain-text {
+  visibility: hidden;
+}
+
+input[type=checkbox].hidden-checkbox:checked ~ div.curtain__panel--left .curtain-text, input[type=checkbox].hidden-checkbox:checked ~ div.curtain__panel--right .curtain-text {
+  visibility: visible;
+}
+
+.curtain-text {
+  color: black;
+  font-size: 40px;
+  font-weight: 500;
+  margin-top: 50px;
+}
+.curtain__panel--left .curtain-text {
+  text-align: right;
+}
+.curtain__panel--left .curtain-text span {
+  padding-right: 10px;
+  text-align: right;
+}
+
+.d-flex {
+  display: flex;
+}
+.d-flex button {
+  flex-grow: 1;
+  border: none;
+  background-color: #c90000;
+  color: white;
+  padding: 10px 5px;
+}
+.d-flex button:nth-of-type(odd) {
+  flex-grow: 1;
+  border: none;
+  background-color: rgba(201, 0, 0, 0.5);
+}
+.send {
+  width: 200px;
+  margin: 50px auto;
+  position: relative;
+  background-color: var(--curtain);
+  border: none;
+  color: white;
+}
+.send:disabled {
+  opacity: 0.25;
+}
+.send:before {
+  content: "";
+  width: 180px;
+  height: 0;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  border-bottom: 10px solid var(--curtain);
+  border-left: 10px solid var(--bg);
+  border-right: 10px solid var(--bg);
+}
+
+.send:after {
+  content: "";
+  width: 180px;
+  height: 0;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  border-top: 10px solid var(--curtain);
+  border-left: 10px solid var(--bg);
+  border-right: 10px solid var(--bg);
+}
